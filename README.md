@@ -1,2 +1,2 @@
 # hapi-flow-starter
-A somewhat opiniated Hapi starter
+To be updated.

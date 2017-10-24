@@ -1,0 +1,30 @@
+{
+  "name": "hapi-flow-starter",
+  "version": "0.0.1",
+  "description": "Hapi boilerplate with Flow type checker",
+  "main": "index.js",
+  "repository": "git@github.com:tiberiualex/hapi-flow-starter.git",
+  "author": "Tiberiu Alexandru Butnaru",
+  "license": "MIT",
+  "scripts": {
+    "lint": "eslint \"src/**\" && flow && flow-remove-types --pretty --sourcemaps src/ -d lib/",
+    "watch:lint": "onchange \"src//**/*.js\" -- npm run lint -q",
+    "watch:server": "nodemon --inspect --watch lib lib/*.js",
+    "all": "parallelshell \"npm run watch:lint\" \"npm run watch:server\""
+  },
+  "dependencies": {
+    "hapi": "^16.6.2"
+  },
+  "devDependencies": {
+    "babel-eslint": "7",
+    "eslint": "3.19.0",
+    "eslint-config-airbnb-base": "^11.2.0",
+    "eslint-plugin-flowtype": "^2.35.0",
+    "eslint-plugin-import": "^2.7.0",
+    "flow-bin": "^0.49.1",
+    "flow-remove-types": "^1.2.1",
+    "nodemon": "^1.11.0",
+    "onchange": "^3.2.1",
+    "parallelshell": "^3.0.1"
+  }
+}
